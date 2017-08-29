@@ -37,7 +37,11 @@ gem "json", ">= 2.0.0"
 
 gem "rubocop", ">= 0.47", require: false
 
+# https://github.com/guard/rb-inotify/pull/79
 gem "rb-inotify", github: "matthewd/rb-inotify", branch: "close-handling", require: false
+
+# https://github.com/puma/puma/pull/1345
+gem "stopgap_13632", platforms: :mri
 
 group :doc do
   gem "sdoc", github: "robin850/sdoc", branch: "upgrade"
